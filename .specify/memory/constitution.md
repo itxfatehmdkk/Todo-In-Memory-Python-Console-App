@@ -1,55 +1,47 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT
+Version change: N/A (initial version) → 1.0.0
+List of modified principles: N/A (initial creation)
+Added sections: All sections from user-provided constitution
+Removed sections: N/A
+Templates requiring updates: N/A (initial creation)
+Follow-up TODOs: None
+-->
+
+# The Evolution of Todo – Phase I Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Authority
+This Constitution is the highest governing document for Phase I of the Evolution of Todo project. All specifications, instructions, and generated implementations MUST strictly comply with this document. In case of conflict, this Constitution takes precedence over all other files.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Purpose
+The purpose of Phase I is to demonstrate spec-driven development by designing and generating a minimal, correct, in-memory command-line Todo application using Claude Code and Spec-Kit Plus. This phase evaluates architectural clarity, specification quality, and AI control—not feature richness.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Roles and Responsibilities
+The human participant acts as Product Architect, System Designer, and Specification Author. Claude Code acts strictly as Implementation engine and Executor of specifications. Claude Code MUST NOT make product, architectural, or behavioral decisions. Manual code modification is strictly prohibited.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. System Scope
+The system MUST be a single-user application, run as a command-line interface (CLI), store all data in memory only, and lose all data when the program terminates. The system MUST NOT persist data to files or databases, use networking or external services, contain AI logic or inference, include UI frameworks, or introduce priorities, categories, deadlines, reminders, or scheduling.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Domain Boundaries
+The system manages abstract Todo tasks only. A Task is strictly defined by id: integer (unique per runtime), title: non-empty string, description: optional string, completed: boolean. No additional task attributes are permitted in Phase I.
 
-### [PRINCIPLE_6_NAME]
+### VI. Behavioral Rules
+All system behavior MUST be explicitly defined by specifications. Undefined behavior MUST NOT be implemented. Invalid user input MUST be handled gracefully. Errors MUST be deterministic and human-readable.
 
+## Architectural Principles
+The implementation MUST follow Separation of concerns, Single Responsibility Principle, Readable and maintainable structure, and Predictable control flow. The architecture MUST allow future phases to extend functionality without altering Phase I behavior.
 
-[PRINCIPLE__DESCRIPTION]
+## Technical Constraints
+Programming Language: Python 3.13+, Dependencies: Python standard library only, Environment: Linux (WSL2 for Windows users), Package management: UV.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Spec-Driven Enforcement
+Specifications define WHAT the system does. Implementation defines HOW, but only within specification boundaries. If generated behavior is incorrect, the specification MUST be refined. The implementation MUST NEVER be manually edited.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Completion Criteria
+Phase I is complete only when all required features are implemented via specifications, the CLI application behaves exactly as specified, no scope violations exist, and the repository structure is clean and professional.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+Specifications define WHAT the system does. Implementation defines HOW, but only within specification boundaries. If generated behavior is incorrect, the specification MUST be refined. The implementation MUST NEVER be manually edited.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-28 | **Last Amended**: 2025-12-28
