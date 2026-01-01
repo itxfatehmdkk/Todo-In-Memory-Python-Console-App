@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Todo CLI Application with Visual Enhancements
 
 A simple command-line todo application that stores tasks in memory only. All data is lost when the application exits. Features Unicode icons and color-coded status indicators for enhanced user experience.
@@ -69,7 +68,3 @@ The application provides the following options through its menu:
 - Empty titles are not allowed when adding or updating tasks
 - Invalid task IDs will result in error messages but won't crash the application
 - Colors will automatically adapt to systems that don't support colorama (fallback to plain text)
-=======
-# Todo-In-Memory-Python-Console-App
-A command-line todo application that stores tasks in memory using Claude Code and Spec-Kit Plus.
->>>>>>> 673609c09f24fdba25e96675d491b51488c69f0a
