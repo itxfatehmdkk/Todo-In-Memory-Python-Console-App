@@ -17,6 +17,37 @@ env.bak/
 venv.bak/
 
 # -------------------------------
+# Node.js/JavaScript/TypeScript
+# -------------------------------
+node_modules/
+dist/
+build/
+*.log
+.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+.next/
+out/
+.nuxt/
+output/
+coverage/
+.nyc_output/
+jspm_packages/
+web-build/
+.eslintcache
+.stylelintcache
+
+# -------------------------------
+# Next.js specific
+# -------------------------------
+.next/
+out/
+.next/cache/
+
+# -------------------------------
 # IDEs
 # -------------------------------
 .vscode/
@@ -117,3 +148,18 @@ site/
 .env
 .envrc
 runtime.txt
+
+# -------------------------------
+# Project Specific (Todo App)
+# -------------------------------
+
+# Database
+*.db
+*.sqlite3
+
+# Claude / AI local files
+.claude/
+*.local.json
+
+# Windows scripts temp
+nul
